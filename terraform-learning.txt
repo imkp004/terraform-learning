@@ -1,4 +1,5 @@
 terraform is used to provision (create) the infrastructure in your cloud
+it can it any cloud provider aws, azure, google, cloudflare.
 
 we can create cloud infrastructure using aws cloud provider and going into 
 the aws console to create EC2, S3 bucket, database etc but with 
@@ -21,4 +22,20 @@ this is used to keep all the track records which includes what it made, all the
 infrastructur we currtly have that we made my using terrraform.
 So, if we change the code then it will automatically undertand what changes and
 will figure out what it need to create or delete based on the code.
+
+
+
+So, all the things which are being created is getting stored in the state file and 
+they are large in size so you have two options to store it either 
+
+Local Backend is basically storing all the state files in your own computer.
+
+Remote Backend like terraform cloud or AWS S3 bucket or AWS DybamoDB
+in which you can store those files and access it anytime on cloud and
+Dynamo Db helps prevent two or more people changing the file and applying
+it in our infrastructure which could cause issues.
+How this works is by adding the S3 and DynamoDb in our main.tf file and
+once it creates it in our cloud then we can re-configure it in the state file
+then we have to inilitize terraform again and it will see that as remote backgroung
+insted of local backend and will store it there.
 
