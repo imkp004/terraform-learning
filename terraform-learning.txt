@@ -1,0 +1,24 @@
+terraform is used to provision (create) the infrastructure in your cloud
+
+we can create cloud infrastructure using aws cloud provider and going into 
+the aws console to create EC2, S3 bucket, database etc but with 
+terraform now we can code all that in a terraform file and specify all the 
+stuff we need for our infrastructur and it will make it instantly.
+
+It is use to also updating the infrastructure 
+
+If we are using the infrastructur and we want to update the amout of it for 
+example EC2 if we have 2 instances and we change the current code and specify 3
+instead of 2 then it will create us one more instance. it does not create 
+the infrastructur again it keeps track of what it already has and compares it 
+it with what we have and apllies the changes. also works it updating the each ec2 
+itself like more cpu or memory chaning from t2 to t3 micro.
+
+It is also use for maintaing the infrastructure
+
+meaning that when we inilitize the terraform it creats the terraform.tfstate file
+this is used to keep all the track records which includes what it made, all the 
+infrastructur we currtly have that we made my using terrraform.
+So, if we change the code then it will automatically undertand what changes and
+will figure out what it need to create or delete based on the code.
+

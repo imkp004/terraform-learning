@@ -1,0 +1,33 @@
+terraform init  
+
+Prepares the folder to use Terraform.
+Downloads the plugins (providers) it needs (like AWS).
+Creates some local files so Terraform can track state later.
+
+
+
+terraform plan
+
+will preview the changes
+Shows you what Terraform will do without actually doing it.
+Compares:
+What is written in your .tf files (desired state), and
+What already exists in your cloud account (current state).
+Then prints out an execution plan: “create this, change that, destroy that”.
+
+
+
+terraform apply
+
+this command will create the chnages that was specified in the plan
+Takes the plan and executes it against your cloud.
+Creates, changes, or deletes resources so that reality matches your .tf files.
+
+
+
+terraform destroy
+
+Delets everyting that is in out terraform.tf file
+Reads your state file and .tf files.
+Figures out which resources it created.
+Deletes them all (or all in that project) from your cloud.
