@@ -12,4 +12,5 @@
 *.tfstate.*
 *.tfvars.*
 *.tfvars.json.*
+.env
 
