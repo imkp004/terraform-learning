@@ -38,7 +38,7 @@ data "aws_subnets" "default_public_subnets" {
 }
 
 data "aws_subnet_ids" "default_public_subnet" {
-vpc_id = data.aws_vpc.default_vpc.id
+    vpc_id = data.aws_vpc.default_vpc.id
 }
 
 ############################################
